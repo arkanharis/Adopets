@@ -11,13 +11,8 @@ class Hewan extends Model
 
     protected $table = 'hewan';
 
-    protected $fillable = [
-        'nama',
-        'jenis',
-        'usia',
-        'jenis_kelamin',
-        'kontak',
-        'deskripsi',
+    protected $guarded = [
+        'id'
     ];
 }
 
