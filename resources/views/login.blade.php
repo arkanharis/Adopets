@@ -5,6 +5,7 @@
             <h1 class="text-4xl font-bold mt-8">Login</h1>
 
             <form class="max-w-md mt-8" action="/login" method="post">
+                @csrf
                 <div class="relative z-0 w-full mb-5 group">
                     <input type="email" name="email" id="email"
                         class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
