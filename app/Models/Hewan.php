@@ -20,3 +20,5 @@ class Hewan extends Model
         'deskripsi',
     ];
 }
+
+

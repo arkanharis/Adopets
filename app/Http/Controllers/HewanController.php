@@ -32,6 +32,6 @@ class HewanController extends Controller
     public function index()
     {
         $hewan = Hewan::all();
-        return view('hewan.index', compact('hewan'));
+        return view('hewan.index', compact('hewan'));   //  TODO ganti 'hewan.index' dengan halaman view hewan
     }
 }
