@@ -14,7 +14,7 @@
                 </div>
             </div>
             <h2 class="text-xl font-bold mb-2">find new home for your pet </h2>
-            <p class="mb-4">ind new home for your pet and Make a Difference in the Lives of Those in Need</p>
+            <p class="mb-4">By finding a new home for your pet, you not only ensure their well-being and happiness but also make a meaningful difference in the lives of others who are in need of companionship and love.</p>
             <a href="{{ url('/dashboard/rehome') }}" class="bg-black text-white py-2 px-4 rounded">Rehome</a>
         </div>
         <div class="p-6 rounded-lg text-center" style="background-color: #FFE0B5; max-width: 300px; height: 300px; margin: auto;">
@@ -24,8 +24,8 @@
                 </div>
             </div>
             <h2 class="text-xl font-bold mb-2">Become a foster parent</h2>
-            <p class="mb-4">Open Your Heart and Home to a Pet in Need. Join Our Foster Family and Change Lives, One Paw at a Time</p>
-            <a href="{{ url('/foster') }}" class="bg-black text-white py-2 px-4 rounded">Foster</a>
+            <p class="mb-4">Join Our Foster Family and Change Lives, One Paw at a Time Consider opening your heart and home to a pet in need by joining our foster family. By providing, you can offer love and care to an animal waiting for their forever home.</p>
+            <a href="{{ url('/dashboard/adobe') }}" class="bg-black text-white py-2 px-4 rounded">Adopt</a>
         </div>
     </div>
     </div>
