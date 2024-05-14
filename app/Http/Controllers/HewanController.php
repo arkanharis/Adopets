@@ -26,7 +26,8 @@ class HewanController extends Controller
 
         Hewan::create($request->all());
 
-        return redirect()->route('hewan.index')->with('success', 'Hewan berhasil ditambahkan.');
+        return redirect()->route('hewan.index')->with('success', 'Hewan berhasil ditambahkan.');  //  TODO ganti 'hewan.index' dengan halaman view hewan
+    
     }
 
     public function index()
