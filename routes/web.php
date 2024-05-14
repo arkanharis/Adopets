@@ -8,7 +8,11 @@ Route::get('/', function () {
     ]);
 });
 
-
+Route::get('/user', function () {
+    return view('user.home',  [
+        'title' => 'Home'
+    ]);
+});
 
 
 // Route::get('/hewan/create', [HewanController::class, 'create'])->name('hewan.create');    TODO ganti '/hewan/create' dengan hewan form input hewan
