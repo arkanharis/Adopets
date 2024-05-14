@@ -7,3 +7,9 @@ Route::get('/', function () {
         'title' => 'Home'
     ]);
 });
+
+Route::get('/dashboard', function () {
+    return view('dashboard.home', [
+        'title' => 'Home'
+    ]);
+});
