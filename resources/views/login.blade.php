@@ -1,50 +1,34 @@
-<!DOCTYPE html>
-<html>
+@extends('layouts.main')
+@section('container')
+    <div class="flex flex-row">
+        <div class="w-1/2">
+            <h1 class="text-4xl font-bold mt-8">Login</h1>
 
-<head>
-    @vite(['resources/css/app.css', 'resources/js/app.js'])
-</head>
-
-<body>
-
-    @include('nav')
-
-    <div class="bg-[#FFFFFF] w-[1440px] box-sizing-border flex justify-center items-center h-screen">
-        <form action="/login" method="post" class="flex flex-col items-center" style="position: absolute; top: 230px; left:200px; transform: scale(1.2);">
-            <div class="relative flex flex-col box-sizing-border">
-                <div class="m-[0_95px_49px_95px] flex self-start box-sizing-border">
-                    <span class="break-words font-['Inter'] font-[var(--title-font-weight,700)] text-[64px] tracking-[var(--title-letter-spacing,-1.3px)] text-[#000000]">
-                        Login
-                    </span>
+            <form class="max-w-md mt-8">
+                <div class="relative z-0 w-full mb-5 group">
+                    <input type="email" name="floating_email" id="floating_email"
+                        class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
+                        placeholder=" " required />
+                    <label for="floating_email"
+                        class="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">Email
+                        address</label>
                 </div>
-                <div class="m-[0_95px_0_95px] flex flex-col self-start w-[fit-content] box-sizing-border">
-                    <div class="m-[0_0_24px_0] flex flex-col w-[600px] box-sizing-border">
-                        <label for="email" class="m-[0_0_8px_0] inline-block self-start break-words font-['Inter'] font-[var(--small-text-font-weight,700)] text-[18px] leading-[var(--small-text-line-height,1.5)] text-[#000000]">
-                            Email address
-                        </label>
-                        <input type="email" id="email" name="email" class="shadow-[var(--button-shadow,0px_1px_2px_2px_rgba(0,0,0,0.05))] rounded-[8px] border-[1px_solid_#E0E0E0] bg-[#FFFFFF] p-[11px_15px_11px_15px] w-[600px] box-sizing-border" placeholder="Email">
-                    </div>
-                    <div class="m-[0_0_24px_0] flex flex-col w-[600px] box-sizing-border">
-                        <label for="password" class="m-[0_0_8px_0] inline-block self-start break-words font-['Inter'] font-[var(--small-text-font-weight,700)] text-[18px] leading-[var(--small-text-line-height,1.5)] text-[#000000]">
-                            Password
-                        </label>
-                        <input type="password" id="password" name="password" class="shadow-[var(--button-shadow,0px_1px_2px_2px_rgba(0,0,0,0.05))] rounded-[8px] border-[1px_solid_#E0E0E0] bg-[#FFFFFF] p-[11px_15px_11px_15px] w-[600px] box-sizing-border" placeholder="Password">
-                    </div>
-                    <div class="shadow-[var(--button-shadow,0px_1px_2px_0px_rgba(0,0,0,0.05))] rounded-[8px] bg-[#000000] flex justify-center p-[16px_0.6px_16px_0] w-[600px] box-sizing-border">
-                        <button type="submit" class="break-words font-['Inter'] font-[var(--body-text-font-weight,500)] text-[20px] leading-[var(--body-text-line-height,1.5)] text-[#FFFFFF]">
-                            Submit 
-                        </button>
-                    </div>
-                    <div class="mt-4 text-center">
-                        <span class="text-[#000000]">Don't have an account? </span>
-                        <a href="/register" class="text-blue-500">Register</a>
-                    </div>
+                <div class="relative z-0 w-full mb-5 group">
+                    <input type="password" name="floating_password" id="floating_password"
+                        class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
+                        placeholder=" " required />
+                    <label for="floating_password"
+                        class="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">Password</label>
                 </div>
-            </div>
-        </form>
-        <div class="bg-[url('../../resources/images/login.png')] bg-[50%_50%] bg-cover bg-no-repeat absolute right-[0px] bottom-[124px] w-[736px] h-[736px]">
+                <button type="submit"
+                    class="mt-10 w-full sm:w-full text-white bg-black hover:bg-primary-400 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+                    Submit
+                </button>
+            </form>
         </div>
-    </div>
-</body>
+        <div class="w-1/2">
+            <img src="img/login.png" alt="">
+        </div>
 
-</html>
+    </div>
+@endsection

@@ -13,3 +13,9 @@ Route::get('/dashboard', function () {
         'title' => 'Home'
     ]);
 });
+
+Route::get('/login', function () {
+    return view('login', [
+        'title' => 'Login'
+    ]);
+});
