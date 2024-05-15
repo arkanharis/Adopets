@@ -14,10 +14,10 @@
               <li class="flex items-center">
                   <a href="/login" class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-primary-400 md:p-0">Rehome</a>
               </li>
-              <li class="flex items-center">
+              <li class="flex items-centThe email field must be a valid email address.er">
                   <button id="dropdownUserAvatarButton" data-dropdown-toggle="dropdownAvatar" class="flex text-sm bg-gray-800 rounded-full md:me-0 focus:ring-4 focus:ring-gray-300 dark:focus:ring-gray-600" type="button">
                       <span class="sr-only">Open user menu</span>
-                      <img class="w-8 h-8 rounded-full bg-white" src="img/user.png" alt="user photo">
+                      <img class="w-8 h-8 rounded-full bg-white" src="../img/user.png" alt="user photo">
                   </button>
               </li>
           </ul>
@@ -28,18 +28,21 @@
 <!-- Dropdown menu -->
 <div id="dropdownAvatar" class="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700 dark:divide-gray-600">
   <div class="px-4 py-3 text-sm text-gray-900 dark:text-white">
-    <div>Bonnie Green</div>
+    <div>{{ auth()->user()->name }}</div>
   </div>
   <ul class="py-2 text-sm text-gray-700 dark:text-gray-200" aria-labelledby="dropdownUserAvatarButton">
     <li>
-      <a href="#" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Dashboard</a>
+      <a href="/dashboard" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Dashboard</a>
     </li>
     <li>
-      <a href="#" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Profile</a>
+      <a href="/dashboard/profile" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Profile</a>
     </li>
     
   </ul>
   <div class="py-2">
-    <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white">Sign out</a>
+    <form action="/logout" method="post">
+      @csrf
+      <button type="submit" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white">Sign out</button>
+    </form>    
   </div>
 </div>
