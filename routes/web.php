@@ -17,6 +17,12 @@ Route::get('/dashboard', function () {
     ]);
 });
 
+Route::get('/contact', function () {
+    return view('contactUs', [
+        'title' => 'Contact'
+    ]);
+});
+
 Route::get('dashboard/profile',[DashboardProfileController::class, 'show'])->middleware('auth');
 Route::get('dashboard/profile/edit',[DashboardProfileController::class, 'edit'])->middleware('auth');
 Route::post('dashboard/profile',[DashboardProfileController::class, 'update'])->middleware('auth');
