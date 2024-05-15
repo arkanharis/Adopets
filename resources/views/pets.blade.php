@@ -19,10 +19,12 @@
             </a>
         </div>
     </div>
-    @endforeach    
+    @endforeach        
 </div>
 
-
+<div class="flex justify-center mt-20 mb-16">
+    {{ $pets    ->links('partials.pagination') }}
+</div>
 
 
 @endsection
