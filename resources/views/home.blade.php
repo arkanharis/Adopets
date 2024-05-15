@@ -11,7 +11,7 @@
     </div>
 
     <!-- Adopt Button -->
-    <a href="/login" class="adopt-button">
+    <a href="/pets" class="adopt-button">
         <span>Adopt a Pet</span>
     </a>
 </div>

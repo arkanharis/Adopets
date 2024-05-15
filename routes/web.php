@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\PetController;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\RegisterController;
 use App\Http\Controllers\DashboardProfileController;
@@ -22,6 +23,8 @@ Route::get('/contact', function () {
         'title' => 'Contact'
     ]);
 });
+
+Route::get('/pets',[PetController::class, 'index']);
 
 Route::get('dashboard/profile',[DashboardProfileController::class, 'show'])->middleware('auth');
 Route::get('dashboard/profile/edit',[DashboardProfileController::class, 'edit'])->middleware('auth');
