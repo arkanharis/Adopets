@@ -1,6 +1,19 @@
 @extends('layouts.main')
 @section('container')
 
-    <h1>Ini home</h1>
+<div class="relative w-full h-screen">
+    <!-- Gambar Dashboard -->
+    <div class="dashboard-image"></div>
+
+    <!-- Custom Container -->
+    <div class="custom-container">
+        <p>You can make a difference in their live</p>
+    </div>
+
+    <!-- Adopt Button -->
+    <a href="/login" class="adopt-button">
+        <span>Adopt a Pet</span>
+    </a>
+</div>
 
 @endsection
