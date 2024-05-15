@@ -6,16 +6,10 @@
       <div class="hidden w-full md:flex md:items-center md:w-auto" id="navbar-default">
         <ul class="font-medium flex flex-col p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:flex-row md:space-x-10 rtl:space-x-reverse md:mt-0 md:border-0 md:bg-white">
             <li class="flex items-center">
-                <a href="/login" class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-primary-400 md:p-0">Adopt</a>
+                <a href="/pets" class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-primary-400 md:p-0">Adopt</a>
             </li>
             <li class="flex items-center">
-                <a href="/login" class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-primary-400 md:p-0">How it works</a>
-            </li>
-            <li class="flex items-center">
-                <a href="/login" class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-primary-400 md:p-0">Help Us</a>
-            </li>
-            <li class="flex items-center">
-              <a href="/login" class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-primary-400 md:p-0">Contact</a>
+              <a href="/contact" class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-primary-400 md:p-0">Contact</a>
           </li>
           @auth
               <li class="flex items-center">
